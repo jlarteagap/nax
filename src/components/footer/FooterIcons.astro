@@ -1,0 +1,17 @@
+---
+interface Props {
+	link: string;
+}
+const {link} = Astro.props
+console.log(link)
+---
+
+<a href={link}>
+    <slot />
+</a>
+<style>
+
+    a{
+        color: white;
+    }
+</style>
