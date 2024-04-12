@@ -1,11 +1,13 @@
 ---
 import FooterIcons from "./FooterIcons.astro";
-
-
+import {Image} from "astro:assets"
+import logo from '../../../public/images/nax-snax-logo.png'
 ---
 
 <footer>
-    <div>Logo</div>
+    <div>
+        <Image src={logo} alt="Nax Snax" loading="lazy" width={80} />
+    </div>
     <div class="social__icons">
         <FooterIcons link="http://google.com">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook-filled" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -38,14 +40,13 @@ import FooterIcons from "./FooterIcons.astro";
 
 <style>
     footer{
-        background-color: red;
         display: flex;
         justify-content: space-between;
         padding: 2rem;
+        align-items: center;
     }
     .social__icons{
         display: flex;
         gap: 1rem;
-
     }
 </style>
