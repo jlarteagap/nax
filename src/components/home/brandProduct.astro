@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets'
+import naxSnax from '../../../public/images/nax-snax-logo.png'
+---
+
+<div class="brand__content bg bg--violet">
+    <div class="content brand__logos">
+        <div class="brand__images">
+            <Image src={naxSnax} alt='Nax Snax' loading='lazy'/>
+        </div>
+        <div class="brand__images">
+            <Image src={naxSnax} alt='Nax Snax' loading='lazy'/>
+        </div>
+        <div class="brand__images">
+            <Image src={naxSnax} alt='Nax Snax' loading='lazy'/>
+        </div>
+    </div>
+</div>
+
+<style>
+    .brand__logos{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5rem 0;
+    }
+    .brand__images{
+        width: 150px;
+    }
+</style>
