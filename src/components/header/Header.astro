@@ -1,19 +1,24 @@
 ---
 import {Image} from 'astro:assets'
 import logo from '../../../public/images/nax-snax-logo.png'
+
 ---
 
 <header>
-    <div>
-        <Image src={logo} alt="Nax Snax" loading="lazy" width={140} />
+        <a href="/">
+            <Image class="header__logo" src={logo} alt="Nax Snax" loading="lazy" width={140} />
+    </a>
     </div>
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Papas</a>
-        <a href="#">Nachos</a>
-        <a href="#">Pipas</a>
-        <a href="#">Otros</a>
+    <nav class="header__nav">
+        <a href="/">Inicio</a>
+        <a href="/papas">Papas</a>
+        <a href="/nachos">Nachos</a>
+        <a href="/pipas">Pipas</a>
+        <a href="/otros">Otros</a>
     </nav>
+    <div class="header__burger" id="burgerMenu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+        </div>
 </header>
 
 <style>
@@ -40,7 +45,36 @@ import logo from '../../../public/images/nax-snax-logo.png'
     a:hover{
         color: var(--secondary);
     }
+
+    .header__burger{
+        width: 20px;
+        cursor: pointer;
+        
+        /* display: none; */
+    }
+    .header__burger svg{
+        fill: var(--primary);
+        transition: all 0.3s;
+    }
+    .header__burger svg:hover{
+        fill: var(--secondary);
+    }
     .active{
 
+    }
+
+    @media screen and (max-width: 480px) {
+        .header__logo{
+            padding: 0.5 1rem;
+            max-width: 80px;
+            height: auto;
+        }
+        a{
+            color: red;
+        }
+
+        .header__nav{
+            display: none;
+        }
     }
 </style>
