@@ -1,22 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import { Image } from "astro:assets"
-import papasClasicas from "../../public/images/products/papas-clasicas.png"
+import tocinax from "../../public/images/products/tocinax.png"
+import mix from "../../public/images/products/mix.png"
 ---
 
 <Layout title="Otros productos - NAX SNAX">
-    <section class="bg bg--blue">
+    <section class="bg top__content bg--ocean">
         <div class="content papas__clasicas">
             <div class="papas__frases">
                 <h3>PAPAS CLASICAS</h3>
                 <p>Extra crocante</p>
             </div>
-            <div class="papas__imagen"><Image src={papasClasicas} alt="Papas Clásicas" width={450}/></div>
+            <div class="papas__imagen"><Image src={mix} alt="Papas Clásicas" width={450}/></div>
         </div>
     </section>
-    <section class="bg bg--violet">
+    <section class="bg bg--orange">
         <div class="content papas__clasicas">
-            <div class="papas__imagen"><Image src={papasClasicas} alt="Papas Clásicas" width={450}/></div>
+            <div class="papas__imagen"><Image src={tocinax} alt="Papas Clásicas" width={450}/></div>
             <div class="papas__frases">
                 <h3>PAPAS CLASICAS</h3>
                 <p>Extra crocante</p>

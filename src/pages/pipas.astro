@@ -1,27 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import { Image } from "astro:assets"
-import papasClasicas from "../../public/images/products/papas-clasicas.png"
+import pipas from "../../public/images/products/pipanax.png"
 ---
 
 <Layout title="Pipas - NAX SNAX">
-    <section class="bg bg--blue">
+    <section class="bg top__content bg--darkgreen">
         <div class="content papas__clasicas">
             <div class="papas__frases">
                 <h3>PAPAS CLASICAS</h3>
                 <p>Extra crocante</p>
             </div>
-            <div class="papas__imagen"><Image src={papasClasicas} alt="Papas Clásicas" width={450}/></div>
-        </div>
-    </section>
-    <section class="bg bg--violet">
-        <div class="content papas__clasicas">
-            <div class="papas__imagen"><Image src={papasClasicas} alt="Papas Clásicas" width={450}/></div>
-            <div class="papas__frases">
-                <h3>PAPAS CLASICAS</h3>
-                <p>Extra crocante</p>
-            </div>
-            
+            <div class="papas__imagen"><Image src={pipas} alt="Papas Clásicas" width={450}/></div>
         </div>
     </section>
 </Layout>

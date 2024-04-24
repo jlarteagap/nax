@@ -2,10 +2,12 @@
 import Layout from "../layouts/Layout.astro"
 import { Image } from "astro:assets"
 import papasClasicas from "../../public/images/products/papas-clasicas.png"
+import papasPicantes from '../../public/images/products/papas-picantes.png'
+import papasFuego from '../../public/images/products/papas-fuego.png'
 ---
 
 <Layout title="Papanax - NAX SNAX">
-    <section class="bg bg--blue">
+    <section class="top__content bg bg--blue">
         <div class="content papas__clasicas">
             <div class="papas__frases">
                 <h3>PAPAS CLASICAS</h3>
@@ -16,12 +18,21 @@ import papasClasicas from "../../public/images/products/papas-clasicas.png"
     </section>
     <section class="bg bg--violet">
         <div class="content papas__clasicas">
-            <div class="papas__imagen"><Image src={papasClasicas} alt="Papas Clásicas" width={450}/></div>
+            <div class="papas__imagen"><Image src={papasPicantes} alt="Papas Clásicas" width={450}/></div>
             <div class="papas__frases">
-                <h3>PAPAS CLASICAS</h3>
+                <h3>PAPAS Picantes</h3>
                 <p>Extra crocante</p>
             </div>
             
+        </div>
+    </section>
+    <section class="top__content bg bg--green">
+        <div class="content papas__clasicas">
+            <div class="papas__frases">
+                <h3>PAPAS FUEGO</h3>
+                <p>Extra crocante</p>
+            </div>
+            <div class="papas__imagen"><Image src={papasFuego} alt="Papas Clásicas" width={450}/></div>
         </div>
     </section>
 </Layout>
