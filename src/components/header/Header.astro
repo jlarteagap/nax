@@ -16,7 +16,8 @@ import MenuBurger from './menu.jsx'
         <a href="/pipas">Pipas</a>
         <a href="/otros">Otros</a>
     </nav>
-    <MenuBurger />
+    <MenuBurger client:visible />
+
 </header>
 
 <style is:global>
@@ -25,6 +26,10 @@ import MenuBurger from './menu.jsx'
         justify-content: space-between;
         align-items: center;
         padding: 1rem 2rem;
+        background: linear-gradient(0deg, rgba(0,0,0,0.03) 40%, rgba(0,0,0,1) 80%);
+        height: 100px;
+        z-index: 10;
+        position: relative;
     }
     nav{
         display: flex;

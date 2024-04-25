@@ -38,11 +38,18 @@ import Footer from '../components/footer/Footer.astro';
 
 		--primary: #f5e846;
 		--secondary: #f28310;
+		--darkColor: rgb(90, 90, 90)
 	}
 	html {
 		font-family: system-ui, sans-serif;
 		background: #13151a;
 		background-size: 224px;
+	}
+	body{
+		position: relative;
+		margin: 0;
+		box-sizing: border-box;
+		scroll-behavior: smooth;
 	}
 
 	.bg{
@@ -71,9 +78,28 @@ import Footer from '../components/footer/Footer.astro';
 	.bg--violet{
 		background-image: url(../../public/images/background/1.jpg);
 	}
+	.bg--green{
+		background-image: url(../../public/images/background/2.jpg);
+	}
+	.bg--darkgreen{
+		background-image: url(../../public/images//background/8.jpg);
+	}
+	.bg--red{
+		background-image: url(../../public/images/background/6.jpg);
+	}
+	.bg--orange{
+		background-image: url(../../public/images/background/3.jpg);
+	}
+	.bg--ocean{
+		background-image: url(../../public/images/background/4.jpg);
+	}
 
 	.content{
         width: 1024px;
         margin: 0 auto;
     }
+
+	.top__content{
+		margin-top: -100px;
+	}
 </style>

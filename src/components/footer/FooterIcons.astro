@@ -3,19 +3,8 @@ interface Props {
 	link: string;
 }
 const {link} = Astro.props
-console.log(link)
 ---
 
-<a href={link}>
+<a href={link} class="social__link">
     <slot />
 </a>
-<style>
-
-    a{
-        color: white;
-    }
-    a:hover{
-        transition: all 0.2s;
-        color: var(--primary);
-    }
-</style>
