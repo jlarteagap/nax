@@ -9,13 +9,6 @@ import MenuBurger from './menu.jsx'
             <Image class="header__logo" src={logo} alt="Nax Snax" loading="lazy" width={140} />
     </a>
     </div>
-    <nav class="header__nav">
-        <a href="/">Inicio</a>
-        <a href="/papas">Papas</a>
-        <a href="/nachos">Nachos</a>
-        <a href="/pipas">Pipas</a>
-        <a href="/otros">Otros</a>
-    </nav>
     <MenuBurger client:visible />
 
 </header>
@@ -47,8 +40,7 @@ import MenuBurger from './menu.jsx'
     .header__burger{
         width: 20px;
         cursor: pointer;
-        
-        /* display: none; */
+        display: none;
     }
     .header__burger svg{
         fill: var(--primary);
@@ -64,12 +56,25 @@ import MenuBurger from './menu.jsx'
             max-width: 80px;
             height: auto;
         }
-        a{
-            color: red;
-        }
-
         .header__nav{
-            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            top: 100px;
+            /* z-index: 10; */
+            margin-left: -2rem;
+            background: url(../../../public/images/background/bg__footer.png), #000000d2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-blend-mode: multiply;
+        }
+        .active{
+            display: block;
+        }
+        .header__burger{
+            display: block;
         }
     }
 </style>
