@@ -23,8 +23,16 @@ import naxSnax from '../../../public/images/nax-snax-logo.png'
         justify-content: space-around;
         align-items: center;
         padding: 15rem 0;
+        position: relative;
     }
     .brand__images{
         width: 150px;
+    }
+
+    @media screen and (max-width: 480px) {
+        .brand__logos{
+            flex-direction: column;
+            gap: 4rem;
+        }
     }
 </style>

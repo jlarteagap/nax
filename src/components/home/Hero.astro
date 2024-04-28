@@ -10,10 +10,10 @@ import paClasicas from '../../../public/images/products/papas-clasicas.png'
         <div class="nax__paquetes">
             <div class="nax__imagenes">
                 <Image class="nax__images image1" src={paClasicas} alt="Papas Clasicas Nax" width={250} />
-            <Image class="nax__images image2" src={paClasicas} alt="Papas Clasicas Nax" width={250} />
-            <Image class="nax__images image3" src={paClasicas} alt="Papas Clasicas Nax" width={250} />
-            <Image class="nax__images image4" src={paClasicas} alt="Papas Clasicas Nax" width={250} />
-            <Image class="nax__images image5" src={paClasicas} alt="Papas Clasicas Nax" width={250} />
+                <Image class="nax__images image2" src={paClasicas} alt="Papas Clasicas Nax" width={250} />
+                <Image class="nax__images image3" src={paClasicas} alt="Papas Clasicas Nax" width={250} />
+                <Image class="nax__images image4" src={paClasicas} alt="Papas Clasicas Nax" width={250} />
+                <Image class="nax__images image5" src={paClasicas} alt="Papas Clasicas Nax" width={250} />
             </div>
         </div>
         <div>
@@ -33,9 +33,7 @@ import paClasicas from '../../../public/images/products/papas-clasicas.png'
         height: 100vh;
     }
     .nax__paquetes{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        position: absolute;
         width: 100%;
         height: 100%;
     }
@@ -60,6 +58,7 @@ import paClasicas from '../../../public/images/products/papas-clasicas.png'
     .hero{
         color: wheat;
         position: relative;
+        width: 1024px;
     }
     .nax__images{
         position: absolute;
@@ -91,5 +90,65 @@ import paClasicas from '../../../public/images/products/papas-clasicas.png'
         left: 92%;
         rotate: 7deg;
         z-index: 2;
+    }
+
+    @media screen and (max-width: 480px) {
+        .hero{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .nax__imagenes{
+            width: 100%;
+            height: 100%;
+        }
+        .image1, .image2, .image3, .image4,.image5{
+            width: 100px;
+            height: auto;
+        }
+
+        .image1{
+            left: 40%;
+            top: 150px;
+            transform: translateX(-50%) !important;
+
+        }
+        .nax__hero__title{
+            position: relative;
+            text-align: center;
+        }
+        .image2{
+            left: 52%;
+            top: 130px;
+            rotate: -20deg;
+            position: absolute;
+        }
+        .image3{
+            bottom: 150px;
+            left: 35%;
+            rotate: -26deg;
+            transform: translateX(-50%) !important;
+        }
+        .image4{
+            left: 50%;
+            rotate: -0deg;
+            transform: translateX(-50%) !important;
+            width: 120px;
+            z-index: 2;
+            top: inherit;
+            bottom: 150px;
+        }
+        .image5{
+            left: 65%;
+            rotate: 23deg;
+            transform: translateX(-50%) !important;
+            width: 100px;
+            bottom: 130px;
+        }
     }
 </style>
