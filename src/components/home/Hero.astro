@@ -92,4 +92,66 @@ import paClasicas from '../../../public/images/products/papas-clasicas.png'
         rotate: 7deg;
         z-index: 2;
     }
+    @media screen and (max-width: 480px) {
+        .hero{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .nax__imagenes{
+            width: 100%;
+            height: 100%;
+        }
+        .nax__paquetes{
+            position: absolute;
+        }
+        .image1, .image2, .image3, .image4,.image5{
+            width: 100px;
+            height: auto;
+        }
+
+        .image1{
+            left: 40%;
+            top: 150px;
+            transform: translateX(-50%) !important;
+
+        }
+        .nax__hero__title{
+            position: relative;
+            text-align: center;
+        }
+        .image2{
+            left: 52%;
+            top: 130px;
+            rotate: -20deg;
+            position: absolute;
+        }
+        .image3{
+            bottom: 150px;
+            left: 35%;
+            rotate: -26deg;
+            transform: translateX(-50%) !important;
+        }
+        .image4{
+            left: 50%;
+            rotate: -0deg;
+            transform: translateX(-50%) !important;
+            width: 120px;
+            z-index: 2;
+            top: inherit;
+            bottom: 150px;
+        }
+        .image5{
+            left: 65%;
+            rotate: 23deg;
+            transform: translateX(-50%) !important;
+            width: 100px;
+            bottom: 130px;
+        }
+    }
 </style>
