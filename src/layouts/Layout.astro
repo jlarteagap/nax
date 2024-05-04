@@ -102,4 +102,48 @@ import Footer from '../components/footer/Footer.astro';
 	.top__content{
 		margin-top: -100px;
 	}
+
+	.papas__clasicas{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: 10rem 0;
+        position: relative;
+        width: 100%;
+
+    }
+    .papas__frases{
+        width: 50%;
+    }
+    .papas__frases{
+        color: wheat;
+    }
+    .papas__frases h3{
+        font-size: 3rem;
+        font-weight: 900;
+        margin: 0;
+    }
+    .papas__frases p{
+        line-height: 0.5;
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+
+    @media screen and (max-width: 480px) {
+
+        .papas__clasicas{
+            flex-direction: column;
+        }
+
+        .papas__frases{
+            order: 2;
+        }
+        .papas__imagen{
+            order: 1;
+        }
+        .papas__imagen img{
+            width: 300px;
+            height: auto;
+        }
+    }
 </style>
