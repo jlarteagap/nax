@@ -1,7 +1,7 @@
 ---
 import {Image} from 'astro:assets'
 import logo from '../../../public/images/nax-snax-logo.png'
-
+import MenuBurger from './menu.jsx'
 ---
 
 <header>
@@ -9,19 +9,11 @@ import logo from '../../../public/images/nax-snax-logo.png'
             <Image class="header__logo" src={logo} alt="Nax Snax" loading="lazy" width={140} />
     </a>
     </div>
-    <nav class="header__nav">
-        <a href="/">Inicio</a>
-        <a href="/nachos">Nachos</a>
-        <a href="/papas">Papas</a>
-        <!-- <a href="/pipas">Pipas</a> -->
-        <a href="/otros">Otros</a>
-    </nav>
-    <div class="header__burger" id="burgerMenu">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-        </div>
+    <MenuBurger client:visible />
+
 </header>
 
-<style>
+<style is:global>
     header{
         display: flex;
         justify-content: space-between;
@@ -45,12 +37,10 @@ import logo from '../../../public/images/nax-snax-logo.png'
     a:hover{
         color: var(--secondary);
     }
-
     .header__burger{
         width: 20px;
         cursor: pointer;
-        
-        /* display: none; */
+        display: none;
     }
     .header__burger svg{
         fill: var(--primary);
@@ -59,9 +49,6 @@ import logo from '../../../public/images/nax-snax-logo.png'
     .header__burger svg:hover{
         fill: var(--secondary);
     }
-    .active{
-
-    }
 
     @media screen and (max-width: 480px) {
         .header__logo{
@@ -69,12 +56,39 @@ import logo from '../../../public/images/nax-snax-logo.png'
             max-width: 80px;
             height: auto;
         }
-        a{
-            color: red;
-        }
-
         .header__nav{
-            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 100px;
+            /* z-index: 10; */
+            margin-left: -2rem;
+            background: #000000d2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-blend-mode: multiply;
+            margin-top: -100px;
+            display: flex;
+            transition: all 0.1s;
+        }
+        .active{
+            visibility: visible !important;
+        }
+        .navbar{
+            visibility: hidden;
+            order: 1;
+            flex-direction: column;
+            transition: all 0.1s;
+        }
+        .header__burger{
+            order: 0;
+            display: block;
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            visibility: visible !important;
         }
     }
 </style>
