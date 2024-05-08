@@ -57,24 +57,38 @@ import MenuBurger from './menu.jsx'
             height: auto;
         }
         .header__nav{
-            position: absolute;
+            position: fixed;
             width: 100%;
-            height: 100vh;
+            height: 100%;
             top: 100px;
             /* z-index: 10; */
             margin-left: -2rem;
-            background: url(../../../public/images/background/bg__footer.png), #000000d2;
+            background: #000000d2;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             background-blend-mode: multiply;
+            margin-top: -100px;
+            display: flex;
+            transition: all 0.1s;
         }
         .active{
-            display: block;
+            visibility: visible !important;
+        }
+        .navbar{
+            visibility: hidden;
+            order: 1;
+            flex-direction: column;
+            transition: all 0.1s;
         }
         .header__burger{
+            order: 0;
             display: block;
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            visibility: visible !important;
         }
     }
 </style>
