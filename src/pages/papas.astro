@@ -4,35 +4,28 @@ import { Image } from "astro:assets"
 import papasClasicas from "../../public/images/products/papas-clasicas.png"
 import papasPicantes from '../../public/images/products/papas-picantes.png'
 import papasFuego from '../../public/images/products/papas-fuego.png'
+import Card from "../components/Card.astro"
 ---
 
 <Layout title="Papanax - NAX SNAX">
-    <section class="top__content bg bg--yellow">
-        <div class="content papas__clasicas">
-            <div class="papas__frases">
-                <h3>Papanax Clásica</h3>
-                <p>Las papas como nunca antes las conociste, déjate sorprender por la crocancia y textura que solo Papanax te entrega</p>
-            </div>
-            <div class="papas__imagen"><Image src={papasClasicas} alt="Papas Clásicas" width={450}/></div>
-        </div>
-    </section>
-    <section class="bg bg--darkgreen">
-        <div class="content papas__clasicas">
-            <div class="papas__imagen"><Image src={papasPicantes} alt="Papas Clásicas" width={450}/></div>
-            <div class="papas__frases">
-                <h3>Papanax Picante</h3>
-                <p>Tus papas favoritas con un toque de picante y limón igual de crocante pero con sabor extremo</p>
-            </div>
-            
-        </div>
-    </section>
-    <section class="top__content bg bg--red">
-        <div class="content papas__clasicas">
-            <div class="papas__frases">
-                <h3>Papanax Extra Fuego</h3>
-                <p>Eres realmente valiente? Entonces adorarás Papanax Extra Fuego con un picante pensado para el valiente extremo.</p>
-            </div>
-            <div class="papas__imagen"><Image src={papasFuego} alt="Papas Clásicas" width={450}/></div>
-        </div>
-    </section>
+    <Card 
+        image={papasClasicas} 
+        title="Papanax Clásica" 
+        desc="Las papas como nunca antes las conociste, déjate sorprender por la crocancia y textura que solo Papanax te entrega"
+        bgColor="top__content bg--yellow"
+    />
+    <Card
+        image={papasPicantes}
+        title="Papanax Picante"
+        desc="Tus papas favoritas con un toque de picante y limón igual de crocante pero con sabor extremo"
+        bgColor="bg--darkgreen"
+        direction="card__reverse"
+    />
+    <Card
+        image={papasFuego}
+        title="Papanax Extra Fuego"
+        desc="Eres realmente valiente? Entonces adorarás Papanax Extra Fuego con un picante pensado para el valiente extremo."
+        bgColor=" bg--red"
+
+    />
 </Layout>

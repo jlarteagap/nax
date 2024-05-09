@@ -3,27 +3,21 @@ import Layout from "../layouts/Layout.astro"
 import { Image } from "astro:assets"
 import nachos from "../../public/images/products/nacho-clasico.png"
 import nachosPicantes from "../../public/images/products/nacho-picante.png"
+import Card from "../components/Card.astro"
 ---
 
 <Layout title="Nachos - NAX SNAX">
-    <section class="bg top__content bg--orange">
-        <div class="content papas__clasicas">
-            <div class="papas__frases">
-                <h3>NACHOS CLASICAS</h3>
-                <p>Para las personalidades clásicas nuestro delicioso nacho, las ojuelas finas y la textura     perfecta para disfrutar en todo momento.
-                </p>
-            </div>
-            <div class="papas__imagen"><Image src={nachos} alt="Papas Clásicas" width={450}/></div>
-        </div>
-    </section>
-    <section class="bg bg--green">
-        <div class="content papas__clasicas">
-            <div class="papas__imagen"><Image src={nachosPicantes} alt="Papas Clásicas" width={450}/></div>
-            <div class="papas__frases">
-                <h3>Nachonax Picante</h3>
-                <p>El equilibrio perfecto entre crocancia textura y sabor. Además te cautivará el ligero toque de picante y limón. Tu ya lo probaste?</p>
-            </div>
-            
-        </div>
-    </section>
+    <Card 
+        image={nachos}
+        title="NACHOS CLASICAS"
+        desc="Para las personalidades clásicas nuestro delicioso nacho, las ojuelas finas y la textura     perfecta para disfrutar en todo momento."
+        bgColor="top__content bg--orange"
+    />
+    <Card 
+        image={nachosPicantes}
+        title="Nachonax Picante"
+        desc="El equilibrio perfecto entre crocancia textura y sabor. Además te cautivará el ligero toque de picante y limón. Tu ya lo probaste?"
+        bgColor="bg--green"
+        direction="card__reverse"
+    />
 </Layout>

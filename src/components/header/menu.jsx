@@ -13,7 +13,6 @@ const MenuBurger = () => {
             <a href="/">Inicio</a>
             <a href="/papas">Papas</a>
             <a href="/nachos">Nachos</a>
-            <a href="/pipas">Pipas</a>
             <a href="/otros">Otros</a>
         </nav>
         <div className="header__burger" onClick={activeClick}>

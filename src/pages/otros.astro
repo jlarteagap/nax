@@ -3,26 +3,21 @@ import Layout from "../layouts/Layout.astro"
 import { Image } from "astro:assets"
 import tocinax from "../../public/images/products/tocinax.png"
 import mix from "../../public/images/products/mix.png"
+import Card from "../components/Card.astro"
 ---
 
 <Layout title="Otros productos - NAX SNAX">
-    <section class="bg top__content bg--ocean">
-        <div class="content papas__clasicas">
-            <div class="papas__frases">
-                <h3>Mix Nax</h3>
-                <p>La combinación perfecta de todos los mundos con una combinación de todos tus NaxSnax favoritos. Te retamos a que te resistas!</p>
-            </div>
-            <div class="papas__imagen"><Image src={mix} alt="Papas Clásicas" width={450}/></div>
-        </div>
-    </section>
-    <section class="bg bg--orange">
-        <div class="content papas__clasicas">
-            <div class="papas__imagen"><Image src={tocinax} alt="Papas Clásicas" width={450}/></div>
-            <div class="papas__frases">
-                <h3>Toxinax</h3>
-                <p>Te presentamos uno de tus favoritos Tocinax, con una crocancia única y un sabor extremo a delicioso tocino. No podrás parar de probarlo!</p>
-            </div>
-            
-        </div>
-    </section>
+    <Card
+        image={mix} 
+        title="Mix Nax" 
+        desc="La combinación perfecta de todos los mundos con una combinación de todos tus NaxSnax favoritos. Te retamos a que te resistas!"
+        bgColor="top__content bg--ocean"
+        />
+        <Card
+        image={tocinax} 
+        title="Toxinax" 
+        desc="Te presentamos uno de tus favoritos Tocinax, con una crocancia única y un sabor extremo a delicioso tocino. No podrás parar de probarlo!"
+        bgColor="bg--orange"
+        direction="card__reverse"
+    />
 </Layout>

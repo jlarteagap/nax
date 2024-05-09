@@ -23,7 +23,7 @@ import nachosPicantes from '../../../public/images/products/nacho-picante.png'
         <div>
 
         <div class="nax__hero__title">
-            <h3 class="nax__hero__title__head">Dejate sorprender por todos nuestros sabores extremos</h3>
+            <h3 class="nax__hero__title__head nax__text__shadow">Dejate sorprender por todos nuestros sabores extremos</h3>
         </div>
         </div>
     </div>
@@ -59,12 +59,15 @@ import nachosPicantes from '../../../public/images/products/nacho-picante.png'
         align-items: center;
     }
     .nax__hero__title__head{
-        font-size: 4.4rem;
+        font-size: 3.4rem;
+        width: 50%;
+        text-align: center;
+        line-height: 0.8;
     }
     .hero{
-        color: wheat;
+        color: var(--secondary);
         position: relative;
-        width: 1024px;
+        width: 90%;
     }
     .nax__images{
         position: absolute;
@@ -120,6 +123,12 @@ import nachosPicantes from '../../../public/images/products/nacho-picante.png'
             height: auto;
         }
 
+        .nax__hero__title__head{
+            font-size: 2rem;
+            box-sizing: border-box;
+            padding: 0 1rem;
+            width: 100%;
+        }
         .image1{
             left: 40%;
             top: 150px;
