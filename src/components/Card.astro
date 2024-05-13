@@ -9,7 +9,7 @@ const { image, title, bgColor, direction, desc } = Astro.props;
 			<h3 class="nax__text__shadow">{title}</h3>
 			<p>{desc}</p>
 		</div>
-		<div class="papas__imagen"><Image src={image} alt={title} width={450}/></div>
+		<div class="card__image"><Image src={image} alt={title} width={450}/></div>
 	</div>
 </section>
 <style>
@@ -43,10 +43,16 @@ const { image, title, bgColor, direction, desc } = Astro.props;
 	.card__reverse{
 		flex-direction: row-reverse;
 	}
-
+	.card__image{
+		animation: productMove 4s ease-in infinite;
+	}
+	.card__image img{
+		filter: drop-shadow(-50px 50px 30px rgba(0,0,0,.6));
+	}
 	@media screen and (max-width: 480px) {
 		.card{
 			flex-direction: column-reverse;
+			gap: 3rem;
 		}
 		.card__content{
 			width: 80%;
@@ -54,6 +60,10 @@ const { image, title, bgColor, direction, desc } = Astro.props;
 		}
 		.card__content h3{
 			line-height: 1;
+		}
+		.card__image img{
+			width: 200px;
+			height: auto;
 		}
 	}
 </style>

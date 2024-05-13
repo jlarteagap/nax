@@ -128,4 +128,58 @@ import Footer from '../components/footer/Footer.astro';
             height: auto;
         }
     }
+
+	.image1{
+		animation: upsidedownOnTop 4s ease-in-out infinite;
+	}
+	.image2{
+		animation: upsidedownOnTop2 4s ease-in-out infinite;
+	}
+	.image3{
+		animation: upsidedownOnTop 4s ease-in-out infinite;
+	}
+	.image4{
+		animation: upsidedownOnTop 4s ease-in-out infinite;
+	}
+	.image5{
+		animation: upsidedown 4s ease-in-out infinite;
+	}
+	@keyframes upsidedown {
+		0% {top: 10px;}
+		50% {top:40px;}
+		100% {top:10px;}
+	}
+	@keyframes upsidedownOnTop {
+		0% {top: 10px;}
+		50% {top:40px;}
+		100% {top:10px;}
+	}
+	@keyframes upsidedownOnTop2 {
+		0% {bottom: 15px;}
+		50% {bottom:-40px;}
+		100% {bottom:15px;}
+	}
+	@keyframes upsidedownOnBottom {
+		0% {bottom: 90px;}
+		50% {bottom:140px;}
+		100% {bottom:90px;}
+	}
+
+	@keyframes productMove {
+		0% {
+			transform: translate(0, 0) rotate(0deg);
+		}
+		25% {
+			transform: translate(1px, -20px) rotate(5deg);
+		}
+		50% {
+			transform: translate(0, 0) rotate(0deg);
+		}
+		75% {
+			transform: translate(-1px, -20px) rotate(-5deg);
+		}
+		100% {
+			transform: translate(0, 0) rotate(0deg);
+		}
+	}
 </style>
