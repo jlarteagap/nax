@@ -12,13 +12,11 @@ import nachosPicantes from '../../../public/images/products/nacho-picante.png'
 <div class="hero__content top__content bg bg--blue">
     <div class="content hero">
         <div class="nax__paquetes">
-            <div class="nax__imagenes">
-                <Image class="nax__images image2" src={nachosPicantes} alt="Papas Clasicas Nax" width={220} />
                 <Image class="nax__images image1" src={nachos} alt="Papas Clasicas Nax" width={220} />
+                <Image class="nax__images image2" src={nachosPicantes} alt="Papas Clasicas Nax" width={220} />
                 <Image class="nax__images image3" src={paClasicas} alt="Papas Clasicas Nax" width={220} />
                 <Image class="nax__images image4" src={papaPicantes} alt="Papas Clasicas Nax" width={220} />
                 <Image class="nax__images image5" src={papaFuego} alt="Papas Clasicas Nax" width={220} />
-            </div>
         </div>
         <div>
 
@@ -74,26 +72,24 @@ import nachosPicantes from '../../../public/images/products/nacho-picante.png'
         transform: translateX(-50%);
     }
     .image1{
-        left: -50px;
-        top: 10px;
-        transform: translateY(-50%);
+        left: 5%;
     }
 
     .image2{
         left: 10%;
-        bottom: 15px;
         rotate: -20deg;
     }
+    
     .image3{
         left: 80%;
         rotate: -5deg;
         z-index: 2;
     }
     .image4{
-        left: 90%;
+        left: 85%;
         rotate: 5deg;
+        top: 30%;
         z-index: 0;
-        top: -170px;
     }
     .image5{
         left: 92%;
@@ -130,9 +126,8 @@ import nachosPicantes from '../../../public/images/products/nacho-picante.png'
             width: 100%;
         }
         .image1{
-            left: 40%;
+            left: 60%;
             top: 150px;
-            transform: translateX(-50%) !important;
 
         }
         .nax__hero__title{
@@ -146,24 +141,21 @@ import nachosPicantes from '../../../public/images/products/nacho-picante.png'
             position: absolute;
         }
         .image3{
-            bottom: 150px;
-            left: 35%;
+            bottom: 200px;
+            left: 40%;
             rotate: -26deg;
-            transform: translateX(-50%) !important;
         }
         .image4{
-            left: 50%;
+            left: 55%;
             rotate: -0deg;
-            transform: translateX(-50%) !important;
             width: 120px;
             z-index: 2;
             top: inherit;
             bottom: 150px;
         }
         .image5{
-            left: 65%;
+            left: 70%;
             rotate: 23deg;
-            transform: translateX(-50%) !important;
             width: 100px;
             bottom: 130px;
         }

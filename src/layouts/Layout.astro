@@ -128,41 +128,37 @@ import Footer from '../components/footer/Footer.astro';
             height: auto;
         }
     }
-
 	.image1{
 		animation: upsidedownOnTop 4s ease-in-out infinite;
 	}
 	.image2{
 		animation: upsidedownOnTop2 4s ease-in-out infinite;
 	}
-	.image3{
-		animation: upsidedownOnTop 4s ease-in-out infinite;
-	}
 	.image4{
 		animation: upsidedownOnTop 4s ease-in-out infinite;
 	}
+	.image3{
+		animation: upsidedownOnTop2 4s ease-in-out infinite;
+	}
 	.image5{
-		animation: upsidedown 4s ease-in-out infinite;
-	}
-	@keyframes upsidedown {
-		0% {top: 10px;}
-		50% {top:40px;}
-		100% {top:10px;}
-	}
+		animation: upsidedownOnTop2 4s ease-in-out infinite;
+	} 
+
 	@keyframes upsidedownOnTop {
-		0% {top: 10px;}
-		50% {top:40px;}
-		100% {top:10px;}
+		0%{transform: translate(-100px, -30%);}
+		50%{transform: translate(-100px, 0%)}
+		100%{transform: translate(-100px, -30%)}
 	}
 	@keyframes upsidedownOnTop2 {
-		0% {bottom: 15px;}
-		50% {bottom:-40px;}
-		100% {bottom:15px;}
+		0%{transform: translate(-100px, 0%);}
+		50%{transform: translate(-100px, 40%)}
+		100%{transform: translate(-100px, 0%)}
 	}
-	@keyframes upsidedownOnBottom {
-		0% {bottom: 90px;}
-		50% {bottom:140px;}
-		100% {bottom:90px;}
+
+	@keyframes upsidedownOnTop2Mobile{
+		0%{transform: translate(-50%, 0%);}
+		50%{transform: translate(-50%, 40%)}
+		100%{transform: translate(-50%, 0%)}
 	}
 
 	@keyframes productMove {
@@ -180,6 +176,12 @@ import Footer from '../components/footer/Footer.astro';
 		}
 		100% {
 			transform: translate(0, 0) rotate(0deg);
+		}
+	}
+
+	@media screen and (max-width: 480px;) {
+		.image1{
+			animation: upsidedownOnTop2Mobile 4s ease-in-out infinite;
 		}
 	}
 </style>
