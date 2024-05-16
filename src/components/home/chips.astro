@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import chip from '../../../public/images/iconPapa.png'
+import nachos from '../../../public/images/nachos.png'
+---
+<div class="sideAnimate">
+    <Image src={chip} width={150} alt="chips" class="chip chips1" data-hidden/>
+    <Image src={nachos} width={150} alt="chips" class="chip chips2" data-hidden/>
+    <Image src={chip} width={150} alt="chips" class="chip chips3" data-hidden/>
+    <Image src={chip} width={150} alt="chips" class="chip chips4" data-hidden/>
+</div>
+
+<style>
+    .chip{
+        position: absolute;
+        rotate: 0deg;
+        z-index: 99;
+    }
+    .chips1{
+        left: 0;
+        animation: detoditofalldownl 30s linear infinite;
+    }
+    .chips4{
+        left: 10px;
+
+        animation: detoditofalldownl 50s linear infinite;
+    }
+
+    .chips2{
+        right: -20px;
+        animation: detoditofalldown 40s linear infinite;
+    }
+    .chips3{
+        right: 30px;
+        animation: detoditofalldownl 60s linear infinite;
+    }
+
+    @keyframes detoditofalldownl {
+        0%   {top: -10%; rotate: 50deg; right:10px;}
+        25%  {top: 25%; rotate: 10deg; right:30px;}
+        50%  {top: 50%; rotate: 90deg; right:10px;}
+        100% {top: 110%; rotate: 10deg; right:10px;}
+    }
+
+    @keyframes detoditofalldown {
+        0%   {top: -10%; rotate: 50deg; right:10px;}
+        25%  {top: 25%; rotate: 10deg; right:30px;}
+        50%  {top: 50%; rotate: 90deg; right:10px;}
+        100% {top: 110%; rotate: 10deg; right:0;}
+    }
+
+    @media screen and (max-width: 480px) {
+        .chip{
+            width: 100px !important;
+            height: auto;
+        }
+    }
+</style>

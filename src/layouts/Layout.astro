@@ -6,6 +6,7 @@ interface Props {
 const { title } = Astro.props;
 import Header from '../components/header/Header.astro';
 import Footer from '../components/footer/Footer.astro';
+import Chips from '../components/home/chips.astro';
 ---
 
 <!doctype html>
@@ -14,11 +15,12 @@ import Footer from '../components/footer/Footer.astro';
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/public/images/nax-snax-logo.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
+		<Chips />
 		<Header/>
 		<slot />
 		<Footer />
@@ -50,6 +52,7 @@ import Footer from '../components/footer/Footer.astro';
 		margin: 0;
 		box-sizing: border-box;
 		scroll-behavior: smooth;
+		overflow-x: hidden;
 	}
 
 	.bg{
