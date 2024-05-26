@@ -20,8 +20,8 @@ import Chips from '../components/home/chips.astro';
 		<title>{title}</title>
 	</head>
 	<body>
-		<Chips />
 		<Header/>
+		<Chips />
 		<slot />
 		<Footer />
 	</body>
@@ -42,6 +42,20 @@ import Chips from '../components/home/chips.astro';
 		--secondary: #f5e846;
 		--darkColor: rgb(90, 90, 90)
 	}
+
+	@font-face {
+		font-family: 'Comictastic';
+		src:url('../../public/fonts/Comictastic.woff') format('woff'),
+				url('../../public/fonts/Comictastic.woff2') format('woff2'),
+				url('../../public/fonts/Comictastic.svg#Comictastic') format('svg'),
+				url('../../public/fonts/Comictastic.eot'),
+				url('../../public/fonts/Comictastic.eot?#iefix') format('embedded-opentype'),
+				url('../../public/fonts/Comictastic.otf') format('truetype');
+
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
 	html {
 		font-family: system-ui, sans-serif;
 		background: #13151a;
@@ -56,6 +70,7 @@ import Chips from '../components/home/chips.astro';
 	}
 
 	.bg{
+		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size:cover;
