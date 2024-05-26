@@ -16,7 +16,7 @@ import MenuBurger from './menu.jsx'
 <style is:global>
     header{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         padding: 1rem 2rem;
         background: linear-gradient(0deg, rgba(0,0,0,0.03) 40%, rgba(0,0,0,1) 80%);
@@ -51,6 +51,9 @@ import MenuBurger from './menu.jsx'
     }
 
     @media screen and (max-width: 480px) {
+        header{
+            justify-content: space-between;
+        }
         .header__logo{
             padding: 0.5 1rem;
             max-width: 80px;

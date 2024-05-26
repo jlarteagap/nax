@@ -6,6 +6,7 @@ import papaPicantes from '../../../public/images/products/papas-picantes.png'
 import papaFuego from '../../../public/images/products/papas-fuego.png'
 import nachos from '../../../public/images/products/nacho-clasico.png'
 import nachosPicantes from '../../../public/images/products/nacho-picante.png'
+import saboresExtremos from '../../../public/images/sabores-extremos.png'
 
 ---
 
@@ -21,7 +22,8 @@ import nachosPicantes from '../../../public/images/products/nacho-picante.png'
         <div>
 
         <div class="nax__hero__title">
-            <h3 class="nax__hero__title__head nax__text__shadow">Dejate sorprender por todos nuestros sabores extremos</h3>
+            <h3 class="nax__hero__title__head">Dejate sorprender por todos nuestros</h3>
+            <Image src={saboresExtremos} alt="Sabores extremos" width={300} />
         </div>
         </div>
     </div>
@@ -33,6 +35,7 @@ import nachosPicantes from '../../../public/images/products/nacho-picante.png'
         display: flex;
         justify-content: center;
         height: 100vh;
+        overflow: hidden;
     }
     .nax__paquetes{
         display: flex;
@@ -53,23 +56,29 @@ import nachosPicantes from '../../../public/images/products/nacho-picante.png'
         width: 100%;
         height: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     .nax__hero__title__head{
-        font-size: 3.4rem;
-        width: 50%;
+        font-size: 5rem;
+        width: 70%;
         text-align: center;
         line-height: 0.8;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        position: relative;
+        z-index: 10;
     }
     .hero{
-        color: var(--secondary);
+        color: white;
         position: relative;
         width: 90%;
     }
     .nax__images{
         position: absolute;
         transform: translateX(-50%);
+        z-index: 0;
     }
     .image1{
         left: 5%;
@@ -120,6 +129,7 @@ import nachosPicantes from '../../../public/images/products/nacho-picante.png'
         }
 
         .nax__hero__title__head{
+            margin-top: 0;
             font-size: 2rem;
             box-sizing: border-box;
             padding: 0 1rem;
@@ -133,6 +143,11 @@ import nachosPicantes from '../../../public/images/products/nacho-picante.png'
         .nax__hero__title{
             position: relative;
             text-align: center;
+        }
+
+        .nax__hero__title img{
+            width: 180px;
+            height: auto;
         }
         .image2{
             left: 52%;
