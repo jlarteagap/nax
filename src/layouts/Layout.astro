@@ -6,7 +6,6 @@ interface Props {
 const { title } = Astro.props;
 import Header from '../components/header/Header.astro';
 import Footer from '../components/footer/Footer.astro';
-import Chips from '../components/home/chips.astro';
 ---
 
 <!doctype html>
@@ -21,7 +20,7 @@ import Chips from '../components/home/chips.astro';
 	</head>
 	<body>
 		<Header/>
-		<Chips />
+		
 		<slot />
 		<Footer />
 	</body>
@@ -56,6 +55,19 @@ import Chips from '../components/home/chips.astro';
 		font-style: normal;
 		font-display: swap;
 	}
+
+	@font-face {
+  font-family: 'Helvetica-Rounded-Bold';
+  src:url('../../public/fonts/Helvetica-Rounded-Bold.woff') format('woff'),
+        url('../../public/fonts/Helvetica-Rounded-Bold.woff2') format('woff2'),
+        url('../../public/fonts/Helvetica-Rounded-Bold.eot'),
+        url('../../public/fonts/Helvetica-Rounded-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../../public/fonts/Helvetica-Rounded-Bold.otf') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 	html {
 		font-family: system-ui, sans-serif;
 		background: #13151a;

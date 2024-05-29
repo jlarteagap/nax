@@ -4,9 +4,12 @@ import { Image } from "astro:assets"
 import tocinax from "../../public/images/products/tocinax.png"
 import mix from "../../public/images/products/mix.png"
 import Card from "../components/Card.astro"
+import Chips from "../components/home/chips.astro"
+const chips = ["nachos", "papas", "nachos", "papas"]
 ---
 
 <Layout title="Otros productos - NAX SNAX">
+    <Chips chips={chips}/>
     <Card
         image={mix} 
         title="Mix Nax" 

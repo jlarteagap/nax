@@ -1,12 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import { Image } from "astro:assets"
 import nachos from "../../public/images/products/nacho-clasico.png"
 import nachosPicantes from "../../public/images/products/nacho-picante.png"
 import Card from "../components/Card.astro"
+import Chips from '../components/home/chips.astro';
+
+const chips = ["nachos", "nachos", "nachos", "nachos"]
 ---
 
 <Layout title="Nachos - NAX SNAX">
+    <Chips chips={chips}/>
     <Card 
         image={nachos}
         title="NACHOS CLASICAS"

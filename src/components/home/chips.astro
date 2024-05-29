@@ -2,12 +2,19 @@
 import { Image } from "astro:assets";
 import chip from '../../../public/images/iconPapa.png'
 import nachos from '../../../public/images/nachos.png'
+import tocino from '../../../public/images/nachos.png'
+
+const {chips} = Astro.props
+console.log(chips)
 ---
 <div class="sideAnimate">
-    <Image src={chip} width={150} alt="chips" class="chip chips1" data-hidden/>
-    <Image src={nachos} width={150} alt="chips" class="chip chips2" data-hidden/>
-    <Image src={chip} width={150} alt="chips" class="chip chips3" data-hidden/>
-    <Image src={chip} width={150} alt="chips" class="chip chips4" data-hidden/>
+    {chips.map((e, i) => {
+        return(
+            <Image src={e === "papas" ? chip : e === "nachos" ? nachos : tocino} width={150} alt={e} class={`chip chips${i}`} data-hidden/>
+        )
+    })}
+    <!-- <Image src={nachos} width={150} alt="chips" class="chip chips2" data-hidden/>
+    <Image src={chip} width={150} alt="chips" class="chip chips4" data-hidden/> -->
 </div>
 
 <style>
@@ -16,21 +23,21 @@ import nachos from '../../../public/images/nachos.png'
         rotate: 0deg;
         z-index: 9;
     }
-    .chips1{
+    .chips0{
         left: 0;
         animation: detoditofalldownl 30s linear infinite;
     }
-    .chips4{
+    .chips3{
         left: 10px;
 
         animation: detoditofalldownl 50s linear infinite;
     }
 
-    .chips2{
+    .chips1{
         right: -20px;
         animation: detoditofalldown 40s linear infinite;
     }
-    .chips3{
+    .chips2{
         right: 30px;
         animation: detoditofalldownl 60s linear infinite;
     }

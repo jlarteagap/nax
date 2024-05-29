@@ -6,9 +6,12 @@ import papasPicantes from '../../public/images/products/papas-picantes.png'
 import papasFuego from '../../public/images/products/papas-fuego.png'
 import Card from "../components/Card.astro"
 import Chips from "../components/home/chips.astro"
+
+const chips = ["papas", "papas", "papas", "papas"]
 ---
 
 <Layout title="Papanax - NAX SNAX">
+    <Chips chips={chips}/>
     <Card 
         image={papasClasicas} 
         title="Papanax Clásica" 
