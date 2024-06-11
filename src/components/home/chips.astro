@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import chip from '../../../public/images/iconPapa.png'
 import nachos from '../../../public/images/nachos.png'
-import tocino from '../../../public/images/nachos.png'
+import tocino from '../../../public/images/iconChicharron.png'
 
 const {chips} = Astro.props
 console.log(chips)
@@ -13,8 +13,6 @@ console.log(chips)
             <Image src={e === "papas" ? chip : e === "nachos" ? nachos : tocino} width={150} alt={e} class={`chip chips${i}`} data-hidden/>
         )
     })}
-    <!-- <Image src={nachos} width={150} alt="chips" class="chip chips2" data-hidden/>
-    <Image src={chip} width={150} alt="chips" class="chip chips4" data-hidden/> -->
 </div>
 
 <style>

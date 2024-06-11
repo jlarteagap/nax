@@ -4,6 +4,7 @@ import nachos from "../../public/images/products/nacho-clasico.png"
 import nachosPicantes from "../../public/images/products/nacho-picante.png"
 import Card from "../components/Card.astro"
 import Chips from '../components/home/chips.astro';
+import limon from '../../public/images/icons/limon.png'
 
 const chips = ["nachos", "nachos", "nachos", "nachos"]
 ---
@@ -12,15 +13,17 @@ const chips = ["nachos", "nachos", "nachos", "nachos"]
     <Chips chips={chips}/>
     <Card 
         image={nachos}
-        title="NACHOS CLASICAS"
+        title="NACHONAX"
         desc="Para las personalidades clásicas nuestro delicioso nacho, las ojuelas finas y la textura     perfecta para disfrutar en todo momento."
         bgColor="top__content bg--orange"
     />
     <Card 
         image={nachosPicantes}
-        title="Nachonax Picante"
+        title="Nachonax"
         desc="El equilibrio perfecto entre crocancia textura y sabor. Además te cautivará el ligero toque de picante y limón. Tu ya lo probaste?"
         bgColor="bg--green"
         direction="card__reverse"
+        icon={limon}
+        iconDesc="Nachonax Picante"
     />
 </Layout>

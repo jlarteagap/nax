@@ -1,11 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import { Image } from "astro:assets"
 import tocinax from "../../public/images/products/tocinax.png"
 import mix from "../../public/images/products/mix.png"
 import Card from "../components/Card.astro"
 import Chips from "../components/home/chips.astro"
-const chips = ["nachos", "papas", "nachos", "papas"]
+const chips = ["nachos", "papas", "nachos", "tocino"]
 ---
 
 <Layout title="Otros productos - NAX SNAX">
@@ -20,7 +19,7 @@ const chips = ["nachos", "papas", "nachos", "papas"]
         image={tocinax} 
         title="Toxinax" 
         desc="Te presentamos uno de tus favoritos Tocinax, con una crocancia única y un sabor extremo a delicioso tocino. No podrás parar de probarlo!"
-        bgColor="bg--orange"
+        bgColor="bg--pink"
         direction="card__reverse"
     />
 </Layout>

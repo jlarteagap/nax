@@ -1,12 +1,15 @@
 ---
 import { Image } from "astro:assets"
-const { image, title, bgColor, direction, desc } = Astro.props;
+const { image, title, bgColor, direction, desc, icon, iconDesc } = Astro.props;
 ---
 
 <section class={`${bgColor} bg`}>
 	<div class={`content card ${direction}`}>
 		<div class="card__content">
-			<h3 class="nax__text__shadow">{title}</h3>
+			{icon && <Image src={icon} alt={iconDesc} class="icon"/>}
+			<div class="card__head">
+				<h3 class="nax__text__shadow title__border">{title}</h3>
+			</div>
 			<p>{desc}</p>
 		</div>
 		<div class="card__image"><Image src={image} alt={title} width={450}/></div>
@@ -25,13 +28,26 @@ const { image, title, bgColor, direction, desc } = Astro.props;
     .card__content{
         width: 50%;
     }
-    .card__content h3{
-		color: var(--secondary);
+	.card__head {
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		transform: rotate(-10deg);
+		transform-origin: 0 0;
+	}
+    .card__head h3{
+		color: white;
 		text-shadow: #d3221e 1px 1px 0, var(--primary) 3px 2px 0px;
         font-size: 3rem;
+		font-family: 'PeckhamPress-Trial';
         font-weight: 900;
         margin: 0;
     }
+
+	.card__head .icon{
+		margin-bottom: 1.5rem;
+	}
     .card__content p{
 		box-sizing: border-box;
 		color: white;
@@ -60,7 +76,10 @@ const { image, title, bgColor, direction, desc } = Astro.props;
 			width: 80%;
 			text-align: center;
 		}
-		.card__content h3{
+		.card__head h3{
+			margin: 3rem 0;
+			font-size: 2rem;
+			padding: 0 1.5rem;
 			line-height: 1;
 		}
 		.card__image img{

@@ -57,17 +57,29 @@ import Footer from '../components/footer/Footer.astro';
 	}
 
 	@font-face {
-  font-family: 'Helvetica-Rounded-Bold';
-  src:url('../../public/fonts/Helvetica-Rounded-Bold.woff') format('woff'),
-        url('../../public/fonts/Helvetica-Rounded-Bold.woff2') format('woff2'),
-        url('../../public/fonts/Helvetica-Rounded-Bold.eot'),
-        url('../../public/fonts/Helvetica-Rounded-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../../public/fonts/Helvetica-Rounded-Bold.otf') format('truetype');
+		font-family: 'Helvetica-Rounded-Bold';
+		src:url('../../public/fonts/Helvetica-Rounded-Bold.woff') format('woff'),
+				url('../../public/fonts/Helvetica-Rounded-Bold.woff2') format('woff2'),
+				url('../../public/fonts/Helvetica-Rounded-Bold.eot'),
+				url('../../public/fonts/Helvetica-Rounded-Bold.eot?#iefix') format('embedded-opentype'),
+				url('../../public/fonts/Helvetica-Rounded-Bold.otf') format('truetype');
 
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+		}
+
+	@font-face {
+		font-family: 'PeckhamPress-Trial';
+		src:url('../../public/fonts/PeckhamPress-Trial.woff') format('woff'),
+				url('../../public/fonts/PeckhamPress-Trial.woff2') format('woff2'),
+				url('../../public/fonts/PeckhamPress-Trial.eot'),
+				url('../../public/fonts/PeckhamPress-Trial.eot?#iefix') format('embedded-opentype'),
+				url('../../public/fonts/PeckhamPress-Trial.otf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+		}
 	html {
 		font-family: system-ui, sans-serif;
 		background: #13151a;
@@ -126,6 +138,9 @@ import Footer from '../components/footer/Footer.astro';
 	.bg--ocean{
 		background-image: url(../../public/images/background/4.jpg);
 	}
+	.bg--pink{
+		background-image: url(../../public/images/background/10.jpg);
+	}
 
 	.content{
         width: 1024px;
@@ -139,6 +154,50 @@ import Footer from '../components/footer/Footer.astro';
 	.nax__text__shadow{
 		text-shadow: #d3221e 1px 1px 0, var(--primary) 3px 2px 0px;
 	}
+
+	.title__border{
+		position: relative;
+		padding: 0 5rem;
+		box-sizing: border-box;
+		display: inline-block;
+	}
+	.title__border:before{
+		content: '';
+		display: block;
+		background: url(../../public/images/left-corner.png) left center no-repeat;
+		width: 100px;
+		height: 50px;
+		position: absolute;
+		left: 2rem;
+		top: -1rem;
+	}
+	.title__border::after{
+		content: '';
+		display: block;
+		background: url(../../public/images/right-corner.png) right bottom no-repeat;
+		width: 100px;
+		height: 150px;
+		position: absolute;
+		right: 0;
+		bottom: -1rem;
+	}
+
+	.image1{
+		animation: upsidedownOnTop 4s ease-in-out infinite;
+	}
+	.image2{
+		animation: upsidedownOnTop2 4s ease-in-out infinite;
+	}
+	.image4{
+		animation: upsidedownOnTop 4s ease-in-out infinite;
+	}
+	.image3{
+		animation: upsidedownOnTop2 4s ease-in-out infinite;
+	}
+	.image5{
+		animation: upsidedownOnTop2 4s ease-in-out infinite;
+	}
+
     @media screen and (max-width: 480px) {
 		.content{
 			width: 95%;
@@ -157,22 +216,13 @@ import Footer from '../components/footer/Footer.astro';
             width: 300px;
             height: auto;
         }
+		.title__border:before{
+			left: -1rem;
+		}
+		.title__border::after{
+
+		}
     }
-	.image1{
-		animation: upsidedownOnTop 4s ease-in-out infinite;
-	}
-	.image2{
-		animation: upsidedownOnTop2 4s ease-in-out infinite;
-	}
-	.image4{
-		animation: upsidedownOnTop 4s ease-in-out infinite;
-	}
-	.image3{
-		animation: upsidedownOnTop2 4s ease-in-out infinite;
-	}
-	.image5{
-		animation: upsidedownOnTop2 4s ease-in-out infinite;
-	} 
 
 	@keyframes upsidedownOnTop {
 		0%{transform: translate(-100px, -30%);}
@@ -206,12 +256,6 @@ import Footer from '../components/footer/Footer.astro';
 		}
 		100% {
 			transform: translate(0, 0) rotate(0deg);
-		}
-	}
-
-	@media screen and (max-width: 480px;) {
-		.image1{
-			animation: upsidedownOnTop2Mobile 4s ease-in-out infinite;
 		}
 	}
 </style>

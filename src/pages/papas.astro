@@ -1,12 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import { Image } from "astro:assets"
 import papasClasicas from "../../public/images/products/papas-clasicas.png"
 import papasPicantes from '../../public/images/products/papas-picantes.png'
 import papasFuego from '../../public/images/products/papas-fuego.png'
 import Card from "../components/Card.astro"
 import Chips from "../components/home/chips.astro"
-
+import fuego from '../../public/images/icons/flame.png'
+import chile from '../../public/images/icons/hot.png'
+ 
 const chips = ["papas", "papas", "papas", "papas"]
 ---
 
@@ -14,22 +15,25 @@ const chips = ["papas", "papas", "papas", "papas"]
     <Chips chips={chips}/>
     <Card 
         image={papasClasicas} 
-        title="Papanax Clásica" 
+        title="Papanax" 
         desc="Las papas como nunca antes las conociste, déjate sorprender por la crocancia y textura que solo Papanax te entrega"
         bgColor="top__content bg--yellow"
     />
     <Card
         image={papasPicantes}
-        title="Papanax Picante"
+        title="Papanax"
         desc="Tus papas favoritas con un toque de picante y limón igual de crocante pero con sabor extremo"
         bgColor="bg--darkgreen"
         direction="card__reverse"
+        icon = {chile}
+        iconDesc = "Papanax Picante"
     />
     <Card
         image={papasFuego}
-        title="Papanax Extra Fuego"
+        title="Papanax"
         desc="Eres realmente valiente? Entonces adorarás Papanax Extra Fuego con un picante pensado para el valiente extremo."
         bgColor=" bg--red"
-
+        icon = {fuego}
+        iconDesc = "Papanax fuego"
     />
 </Layout>
