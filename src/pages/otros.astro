@@ -12,14 +12,21 @@ const chips = ["nachos", "papas", "nachos", "tocino"]
     <Card
         image={mix} 
         title="Mix Nax" 
-        desc="La combinación perfecta de todos los mundos con una combinación de todos tus NaxSnax favoritos. Te retamos a que te resistas!"
         bgColor="top__content bg--ocean"
-        />
+    >
+    <p class="desc">
+        La combinación perfecta de todos los mundos. <br />
+        Una combinación de todos tus NaxSnax favoritos. <br />
+        Te retamos a que te resistas!
+    </p>
+    </Card>
         <Card
         image={tocinax} 
         title="Toxinax" 
-        desc="Te presentamos uno de tus favoritos Tocinax, con una crocancia única y un sabor extremo a delicioso tocino. No podrás parar de probarlo!"
         bgColor="bg--pink"
-        direction="card__reverse"
-    />
+        direction="card__reverse">
+        <p class="desc">Te presentamos uno de tus favoritos! <br />
+            TociNax, con una crocancia única y un sabor a delicioso tocino.<br />
+            Ideal para tu apetito!</p>
+    </Card>
 </Layout>
