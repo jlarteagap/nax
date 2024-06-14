@@ -6,8 +6,8 @@ const { image, title, bgColor, direction, desc, icon, iconDesc } = Astro.props;
 <section class={`${bgColor} bg`}>
 	<div class={`content card ${direction}`}>
 		<div class="card__content">
-			{icon && <Image src={icon} alt={iconDesc} class="icon"/>}
 			<div class="card__head">
+				{icon && <Image src={icon} alt={iconDesc} class="icon"/>}
 				<h3 class="nax__text__shadow title__border">{title}</h3>
 			</div>
 			<!-- description -->
@@ -35,8 +35,6 @@ const { image, title, bgColor, direction, desc, icon, iconDesc } = Astro.props;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		transform: rotate(-10deg);
-		transform-origin: 0 0;
 	}
     .card__head h3{
 		color: white;
@@ -45,10 +43,12 @@ const { image, title, bgColor, direction, desc, icon, iconDesc } = Astro.props;
 		font-family: 'PeckhamPress-Trial';
         font-weight: 900;
         margin: 0;
+		transform: rotate(-10deg);
+		transform-origin: 0 0;
     }
 
-	.card__head .icon{
-		margin-bottom: 1.5rem;
+	.card__content .icon{
+		margin-bottom: 4.5rem;
 	}
     .card__content .desc{
 		box-sizing: border-box;
